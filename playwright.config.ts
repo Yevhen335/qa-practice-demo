@@ -22,7 +22,8 @@ export default defineConfig({
     video: 'retain-on-failure',
     viewport: { width: 1440, height: 900 },
     actionTimeout: 10_000,
-    navigationTimeout: 15_000
+    navigationTimeout: 15_000,
+    headless: false,
   },
   projects: [
     {
