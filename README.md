@@ -268,6 +268,23 @@ This is intentional and reflects the actual application behavior rather than an 
 - [.env.example](/Users/halitsy.y/WebstormProjects/qa-practice-demo/.env.example)
 - [src/config/env.ts](/Users/halitsy.y/WebstormProjects/qa-practice-demo/src/config/env.ts)
 - [tests/fixtures/test.fixture.ts](/Users/halitsy.y/WebstormProjects/qa-practice-demo/tests/fixtures/test.fixture.ts)
+- [docs/AUTOTEST_INSTRUCTION.md](/Users/halitsy.y/WebstormProjects/qa-practice-demo/docs/AUTOTEST_INSTRUCTION.md)
+- [prompts/add-autotests.prompt.md](/Users/halitsy.y/WebstormProjects/qa-practice-demo/prompts/add-autotests.prompt.md)
+
+## Reusable Instruction
+
+If you want to ask Codex to add new autotests and keep the same framework rules every time, use:
+- [docs/AUTOTEST_INSTRUCTION.md](/Users/halitsy.y/WebstormProjects/qa-practice-demo/docs/AUTOTEST_INSTRUCTION.md)
+
+This file contains a reusable prompt with the repository rules for:
+- Playwright MCP analysis first
+- ES Modules only
+- POM architecture
+- fixtures, interfaces, builders
+- `.env` usage
+- explicit `.ts` local imports
+- atomic tests
+- required output format
 
 ## Next Improvements
 
