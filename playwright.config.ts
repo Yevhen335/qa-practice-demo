@@ -23,7 +23,7 @@ export default defineConfig({
     viewport: { width: 1440, height: 900 },
     actionTimeout: 10_000,
     navigationTimeout: 15_000,
-    headless: false,
+    headless: env.headless,
   },
   projects: [
     {

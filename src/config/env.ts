@@ -16,5 +16,6 @@ function getRequiredEnv(name: string): string {
 export const env: EnvConfig = {
   baseUrl: getRequiredEnv('BASE_URL'),
   adminEmail: getRequiredEnv('ADMIN_EMAIL'),
-  adminPassword: getRequiredEnv('ADMIN_PASSWORD')
+  adminPassword: getRequiredEnv('ADMIN_PASSWORD'),
+  headless: getRequiredEnv('HEADLESS') === 'true'
 };
