@@ -7,7 +7,7 @@ test.describe('Loader', () => {
   }) => {
     await loaderPage.open();
 
-    await expect(page).toHaveURL(/\/loader$/);
+    await expect(page).toHaveURL(/\/loader.html$/);
     await loaderPage.expectLoadingState();
     await loaderPage.expectLoadedState();
   });
@@ -21,7 +21,7 @@ test.describe('Loader', () => {
 
     await loaderPage.reloadLoaderPage();
 
-    await expect(page).toHaveURL(/\/loader$/);
+    await expect(page).toHaveURL(/\/loader.html$/);
     await loaderPage.expectLoadingState();
     await loaderPage.expectLoadedState();
   });
