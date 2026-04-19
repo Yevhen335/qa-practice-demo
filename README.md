@@ -211,6 +211,8 @@ The framework is configured with:
 - screenshots on failure
 - video on failure
 
+In CI, an additional CTRF JSON report is generated at `ctrf/ctrf-report.json`.
+
 See:
 [playwright.config.ts](/Users/halitsy.y/WebstormProjects/qa-practice-demo/playwright.config.ts)
 
@@ -224,7 +226,7 @@ The CI pipeline:
 - creates a runtime `.env`
 - installs Playwright Chromium and required Linux dependencies
 - runs the Forms suite
-- uploads the Playwright HTML report and test results as artifacts
+- uploads the Playwright HTML report, CTRF report, and test results as artifacts
 
 ### Recommended GitHub Settings
 

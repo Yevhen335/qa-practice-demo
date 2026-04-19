@@ -61,3 +61,12 @@ jobs:
           name: playwright-test-results
           path: test-results/
           retention-days: 14
+
+      - name: Upload CTRF report
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: ctrf-report
+          path: ctrf/ctrf-report.json
+          if-no-files-found: ignore
+          retention-days: 14

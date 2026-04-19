@@ -5,7 +5,7 @@ export class BasePage implements IBasePage {
   public constructor(protected readonly page: Page) {}
 
   public async goto(path = ''): Promise<void> {
-    await this.page.goto(path);
+    await this.page.goto(path, { waitUntil: 'domcontentloaded' });
   }
 
   protected alertByText(text: string): Locator {
