@@ -1,4 +1,5 @@
 export const ROUTES = {
+  alerts: '/alerts',
   login: '/auth_ecommerce.html',
   register: '/register.html',
   recoverPassword: '/recover-password.html',
