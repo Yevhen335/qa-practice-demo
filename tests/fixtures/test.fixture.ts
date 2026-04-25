@@ -3,14 +3,12 @@ import { LoginCredentialsBuilder } from '../../src/builders/login-credentials.bu
 import { RecoverPasswordDataBuilder } from '../../src/builders/recover-password-data.builder.ts';
 import { RegistrationDataBuilder } from '../../src/builders/registration-data.builder.ts';
 import type { ITestDataFactory } from '../../src/interfaces/test-data-factory.interface.ts';
-import { AlertsPage } from '../../src/pages/alerts.page.ts';
 import { LoaderPage } from '../../src/pages/loader.page.ts';
 import { LoginPage } from '../../src/pages/login.page.ts';
 import { RecoverPasswordPage } from '../../src/pages/recover-password.page.ts';
 import { RegisterPage } from '../../src/pages/register.page.ts';
 
 interface PageFixtures {
-  alertsPage: AlertsPage;
   loaderPage: LoaderPage;
   loginPage: LoginPage;
   registerPage: RegisterPage;
@@ -22,9 +20,6 @@ interface BuilderFixtures {
 }
 
 export const test = base.extend<PageFixtures & BuilderFixtures>({
-  alertsPage: async ({ page }, use) => {
-    await use(new AlertsPage(page));
-  },
   loaderPage: async ({ page }, use) => {
     await use(new LoaderPage(page));
   },
