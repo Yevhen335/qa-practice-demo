@@ -65,11 +65,12 @@ jobs:
           path: test-results/
           retention-days: 14
 
-      - name: Upload CTRF report
+      - name: Publish CTRF Test Summary Results
         if: always()
-        uses: actions/upload-artifact@v6
-        with:
-          name: ctrf-report
-          path: ctrf/ctrf-report.json
-          if-no-files-found: ignore
-          retention-days: 14
+        shell: bash
+        run: |
+          if [ -f ctrf/ctrf-report.json ]; then
+            npx github-actions-ctrf ctrf/ctrf-report.json
+          else
+            echo "No CTRF report found, skipping CTRF publish"
+          fi
