@@ -35,8 +35,8 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     viewport: { width: 1440, height: 900 },
-    actionTimeout: 10_000,
-    navigationTimeout: 15_000,
+    actionTimeout: process.env.CI ? 20_000 : 10_000,
+    navigationTimeout: process.env.CI ? 60_000 : 15_000,
     headless: env.headless,
   },
   projects: [
