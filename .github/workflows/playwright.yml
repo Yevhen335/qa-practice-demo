@@ -4,12 +4,11 @@ on:
   push:
     branches:
       - main
-      - master
   pull_request:
   workflow_dispatch:
 
 concurrency:
-  group: playwright-forms-${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -43,11 +42,8 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Run Forms suite
-        run: npm run test:forms
-
-      - name: Run Loader suite
-        run: npm run test:loader
+      - name: Run all tests
+        run: npm test
 
       - name: Upload Playwright report
         if: always()
