@@ -46,6 +46,9 @@ jobs:
       - name: Run Forms suite
         run: npm run test:forms
 
+      - name: Run Loader suite
+        run: npm run test:loader
+
       - name: Upload Playwright report
         if: always()
         uses: actions/upload-artifact@v6
